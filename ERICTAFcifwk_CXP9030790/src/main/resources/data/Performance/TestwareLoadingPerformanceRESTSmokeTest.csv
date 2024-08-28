@@ -1,0 +1,2 @@
+id,description,url,directory,timeout,expected
+CIP-6341_Func_8.1,Verify Product Testware page load and refresh times are as expected - ENM Testware,ciportal,/ENM/testware/,40,OK

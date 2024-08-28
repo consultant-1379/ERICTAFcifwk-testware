@@ -1,0 +1,5 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/test/1.0.4/mediaContentJson/testwarema/1.0.3/True/,,GET,OK,ERICTAFtestware1_CXP0000018,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testwarema/1.0.3/True/,,GET,OK,ERICTAFtestware2_CXP0000019,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testwarema/1.0.3/True/,,GET,OK,ERICTAFtestware3_CXP0000020,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testwarema/1.0.3/True/,,GET,OK,ERICTAFtestware4_CXP0000021,TRUE

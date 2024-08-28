@@ -1,0 +1,12 @@
+id,description,baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+CIP-8215_Func_2,packagesInComponent,ciportal,/packagesInComponent/,"product=CI,parentValue=DE-Tribe,childValue=Axis",GET,OK,ERICcifwkportal_CXP9030099,TRUE
+CIP-4771_Func_13,,ciportal,ENM/15.15/media/,,GET,OK,1.13.80,TRUE
+,,ciportal,getMediaArtifactVersions/,"product=ENM,drop=15.15",GET,OK,<version>1.13.68</version>,TRUE
+,,ciportal,getMediaArtifactNumber/,"product=ENM,drop=15.15",GET,OK,<cxp>ERICenm_CXP9027091</cxp>,TRUE
+,,ciportal,getMediaArtifactGroup/,"product=ENM,drop=15.15",GET,OK,<group>com.ericsson.oss</group>,TRUE
+,,ciportal,getProductSetNumber/,"drop=15.15,productSet=ENM",GET,OK,<productSetNumber>AOM901151</productSetNumber>,TRUE
+,,ciportal,getProductSetVersions/,"drop=15.15,productSet=ENM",GET,OK,<version>15.0.79</version>,TRUE
+,,ciportal,getLastGoodProductSetVersion/,"drop=15.15,productSet=ENM",GET,OK,15.0.77,TRUE
+,,ciportal,getProductSetVersionContents/,"drop=15.15,version=15.0.78,productSet=ENM",GET,OK,CXP9027091,TRUE
+CIP-6543_Func_1,,ciportal,checkForChanges/,"product=ENM,release=ENM3.0,drop=15.12",GET,OK,false,TRUE
+,,ciportal,/getPackagesInISO/,"{'isoName':'ERICenm_CXP9027091','isoVersion':'1.13.58','pretty':true,'showTestware':false}",POST,OK,ERICcomecimpmcompleteoperationsflow_CXP9032031,TRUE

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIPortalPerformance">
+  <test name="CIPortalPerformance">
+    <classes>
+      <class name="com.ericsson.cifwk.scenarios.PortalUIScenario" >
+        <methods>
+          <include name="performanceUIParallelScenario" />
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+        <methods>
+           <include name="performanceParallelScenario" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIPortalSmokeTest">
+    <test name="Various Portal REST Calls">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.SmokeTestScenario"/>
+        </classes>
+    </test>
+
+    <test name="SED Commands" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.TestSEDCommands">
+                <methods>
+                    <include name="verifySEDRESTFunctionality" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test KGB Metrics REST" preserve-order="true">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.rest.test.cases.TestKGBMetricsREST" />
+        </classes>
+    </test>
+
+    <test name="Test JSON Host Properties">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.rest.test.cases.TestJSONHostProperties" />
+        </classes>
+    </test>
+</suite>

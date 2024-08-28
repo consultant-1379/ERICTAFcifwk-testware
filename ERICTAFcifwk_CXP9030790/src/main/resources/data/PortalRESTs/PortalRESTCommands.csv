@@ -1,0 +1,50 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/mapGatewayToSpp/,gateway=atvts9999&spp=cifwk.vts.com,POST,OK,Created Mapping,TRUE
+ciportal,/getSpp/,gateway=atvts9999,GET,OK,cifwk.vts.com,TRUE
+ciportal,/mapGatewayToSpp/,gateway=atvts9999&spp=cifwkdemo.vts.com,POST,OK,Created Mapping,TRUE
+ciportal,/getSpp/,gateway=atvts9999,GET,OK,cifwkdemo.vts.com,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=false,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfraFromIso/,isoVersion=3.2.1,GET,OK,[],TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICversant_CXP9030229&infra=true,POST,OK,ERICversant_CXP9030229,TRUE
+ciportal,/getInfraFromIso/,isoVersion=3.2.1,GET,OK,ERICversant_CXP9030229,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICversant_CXP9030229&infra=false,POST,OK,ERICversant_CXP9030229,TRUE
+ciportal,/getInfraFromIso/,isoVersion=390.2.9999,GET,OK,[],TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=3.0.0",GET,OK,error,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,[],TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=true,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=false,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,[],TRUE
+ciportal,/api/product/None/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package can be created only for ENM.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package name is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package number is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&mediaCategory=sw,POST,OK,Error: User signum is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot,POST,OK,Error: Media category is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICAlarmRoutingServiceabcdefghijklmnopqrst_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package name length should not be more than 50 characters.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICTAF-abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICTAF.abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERIC-abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERIC.abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICaiws_CXP9032405&packageNumber=CXP9032405&signum=eshusot&mediaCategory=sw,POST,OK,Error: A package with the given name and number already exists. Please use different name and number.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICaiwsabccd_CXP9032405&packageNumber=CXP9032405&signum=eshusot&mediaCategory=sw,POST,OK,Error: A package with the number CXP9032405 already exists under a different name.,TRUE
+ciportal,/api/processAnomalies/,"anomalyList=com.ericsson.oss.itp.sdk:sdk-core-api:jar:3.11.1,com.ericsson.oss.itpf.modeling:model-service-api-jar:jar:6.5.2",POST,OK,SUCCESS: Anomalies created successfully,TRUE
+ciportal,/api/anomalyName/sdk-core-api/anomalyGroupId/com.ericsson.oss.itp.sdk/anomalyVersion/3.11.1/anomalyPackaging/jar/,format=json,GET,OK,"{""result"":true}",TRUE
+ciportal,/api/anomalyName/sdk-core-api/anomalyGroupId/com.ericsson.oss.itp.sdk/anomalyVersion/3.11.5/anomalyPackaging/jar/,format=json,GET,OK,"{""result"":false}",TRUE
+ciportal,/api/processAnomalyPackageRevisionMapping/,"mappingList=com.ericsson.oss.itpf.sdk:sdk-instrumentation-api:jar:3.12.3#com.ericsson.oss.presentation.shm:ERICtest_CXP9030799:1.15.11,com.ericsson.oss.itpf.sdk:sdk-licensing-api:jar:3.12.3#com.ericsson.oss.presentation.shm:ERICtest2_CXP9030799:1.15.11",POST,OK,SUCCESS,TRUE
+ciportal,/api/processVersionMismatches/,"mismatchList=com.ericssonf.sdk:sdk-instrumation-api:3.12.4:3.14.6:ERICsoftwaresynceventmodel_CXP9032514:ENM:16.3:OSS/com.ericsson.oss/instrumentation,com.ericsson.oss.itpf.sdk:sdk-instrumentation-api:3.12.3:3.14.6::ENM:16.3:OSS/com.ericsson.oss/ciexe-test",POST,OK,SUCCESS,TRUE
+ciportal,/api/processVersionMismatches/,emptyList=ENM:16.3:OSS/com.ericsson.oss/instrumentation:ERICsoftwaresynceventmodel_CXP9032514,POST,OK,SUCCESS,TRUE
+ciportal,/api/processVersionMismatches/,"mismatchList=com.ericssonf.sdk:sdk-instrumation-api:3.12.4:3.14.6:ERICsoftwaresynceventmodel_CXP9032514:ENM:16.3:OSS/com.ericsson.oss/instrumentation,com.ericsson.oss.itpf.sdk:sdk-instrumentation-api:3.12.3:3.14.6::ENM:16.3:OSS/com.ericsson.oss/ciexe-test",POST,OK,SUCCESS,TRUE
+ciportal,/api/processVersionMismatches/,emptyList=ENM:16.3:OSS/com.ericsson.oss/instrumentation:,POST,OK,SUCCESS,TRUE
+ciportal,/api/processVersionMismatches/,mismatchList=,POST,OK,ERROR,TRUE
+ciportal,/api/processVersionMismatches/,emptyList=,POST,OK,ERROR,TRUE
+ciportal,/api/processVersionMismatches/,,POST,OK,ERROR,TRUE
+ciportal,/api/getVersionedPlugins/,,GET,OK,,TRUE
+ciportal,/api/getVersionedPlugins/,,GET,OK,sdfsd,FALSE
+ciportal,/api/deployment/installGroup/MainTrack/getIdleCluster,,GET,OK,clusterId,TRUE
+ciportal,/api/deployment/installGroup/MaiTrack/getIdleCluster,,GET,OK,error,TRUE
+ciportal,/api/deployment/searchdeployment/192.168.0.44/,,GET,OK,"[{""ipType"":""found"",""unitName"":null,""serverType"":""Deployment Server"",""clusterId"":73,""ipAddressId"":348,""ipAddressObj"":""192.168.0.44"",""unitNumber"":null,""serverId"":272,""identifier"":""sc2""}]",TRUE
+ciportal,/api/deployment/searchdeployment/00:50:56:00:00:42/,,GET,OK,"[{""ipType"":""found"",""unitName"":null,""serverType"":""Management Server"",""clusterId"":null,""unitNumber"":null,""serverId"":270,""identifier"":""ms-1""},{""ipType"":""found"",""unitName"":null,""serverType"":""Management Server"",""clusterId"":null,""unitNumber"":null,""serverId"":889,""identifier"":""cloud-ms-1""}]",TRUE
+ciportal,/api/deployment/searchdeployment/123.123.123.123/,,GET,NOT_FOUND,[],TRUE
+ciportal,/api/deployment/searchdeployment/xyzpqw/,,GET,NOT_FOUND,[],TRUE
+ciportal,/api/deployment/searchdeployment/00:50:00:00/,,GET,NOT_FOUND,[],TRUE

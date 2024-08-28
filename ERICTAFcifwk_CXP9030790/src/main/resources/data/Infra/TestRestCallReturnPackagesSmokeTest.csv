@@ -1,0 +1,2 @@
+Id,Description,HostName,GetDropBaseURL,RestGetParameters,ExpectedMediaCategory,ExpectedMediaPath,ExpectedName,ExpectedNumber,ExpectedPlatform,ExpectedVersion,ExpectedResult
+CIP-7454_Func_1.1,Rest Call to get Latest infrastructure from a drop and Applications from selected ISO Version for ISO Build,ciportal,getDropContents/,"drop=15.15,product=ENM,baseIsoName=ERICenm_CXP9027091,baseIsoVersion=1.14.67,useLatestInfra=True","sw,plugin","None,None","ERICcamel_CXP9030512,ERIClitpmodeldeploymentapi_CXP9031569","CXP9030512,CXP9031569","None,None","3.2.6,1.0.6","TRUE,TRUE"

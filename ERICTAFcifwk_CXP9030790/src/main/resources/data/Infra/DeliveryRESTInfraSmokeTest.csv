@@ -1,0 +1,2 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/getDropContents/,"drop=15.15,product=ENM",GET,OK,ERICipnediscoveryhandlermodel_CXP9032433,TRUE

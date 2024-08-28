@@ -1,0 +1,25 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/getSpp/,gateway=atvts3000,GET,OK,https://atvpespp14.athtem.eei.ericsson.se/,TRUE
+ciportal,/getInfraFromIso/,isoVersion=1.2.3,GET,OK,ERIClitpversantmanagementapi_CXP9031428,TRUE
+ciportal,/getInfrastructurePackages/,"product=ENM,drop=15.14",GET,OK,ERICenminst_CXP9030877,TRUE
+ciportal,/validateIsoUploadToHub/,"group=com/ericsson/nms,artifact=ERICaiweb_CXP9030517,version=1.0.2,extension=jar,classifier=-sources",GET,OK,SUCCESS,TRUE
+ciportal,/getPreviousEventIDs/,"groupId=com.ericsson.nms,artifactId=ERICtor_CXP9024257,version=3.26.9",GET,OK,ISOBUILD_PREVIOUS_ANE_ID=,TRUE
+ciportal,/getISOContentDelta/,"product=TOR,drop=3.0.T,isoVersion=3.18.2",GET,OK,[{,TRUE
+ciportal,/getAOMRstate/,"product=ENM,drop=15.4",GET,OK,AOM901151 R1A,TRUE
+ciportal,/dropsInProduct/.json/,products=ENM,GET,OK,ENM:15.12,TRUE
+ciportal,/revisionsReleasedInDrop/.json/,drops=CI:3.0.6,GET,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/api/cireports/component/,format=json,GET,OK,labelName,TRUE
+ciportal,/api/cireports/component/enm/,format=json,GET,OK,"productName: "OSS_RC",FALSE
+ciportal,/api/cireports/component/enm/team/,format=json,GET,OK,"labelName: "Tribe",FALSE
+ciportal,api/deployment/clusters/,format=json,GET,OK,name,TRUE
+ciportal,api/deployment/testcases/,format=json,GET,OK,testcase_description,TRUE
+ciportal,api/deployment/testgroups/,format=json,GET,OK,testGroup,TRUE
+ciportal,api/deployment/testgroup/mapping,format=json,GET,OK,cluster,TRUE
+ciportal,/api/product/ENM/drop/15.12/isos/,format=json,GET,OK,latest,TRUE
+ciportal,/api/cifwk/config/section/CIFWK/option/groupId/,format=json,GET,OK,com.ericsson.cifwk,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,format=json,GET,OK,com.ericsson.oss.presentation.client.fm.alarmcontroldisplaygui,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=true,format=json",GET,OK,2.20.46,TRUE
+ciportal,/api/tools/packageversionvalidation/TOR/15.5/ERICalarmpersistencemodel_CXP9030634/1.1.19/None,format=json,GET,OK,WARNING:,TRUE
+ciportal,/api/tools/packageversionvalidation/TOR/15.5/ERICalarmpersistencemodel_CXP9030634/1.1.18/None,format=json,GET,OK,WARNING:,TRUE
+ciportal,/api/tools/packageversionvalidation/TOR/15.5/ERICalarmpersistencemodel_CXP9030634/1.1.17/None,format=json,GET,OK,WARNING:,TRUE
+ciportal,/api/anomalyName/sdk-core-api/anomalyGroupId/com.ericsson.oss.itp.sdk/anomalyVersion/3.11.1/anomalyPackaging/jar/,format=json,GET,OK,"{""result"":true}",TRUE

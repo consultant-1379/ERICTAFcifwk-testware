@@ -1,0 +1,2 @@
+id,description,host,directory,product,dropName,timeoutInMillisOne,timeoutInMillisTwo,expected
+CIP-6341_Func_2.1,Verify Drop page load and refresh times are as expected - ENM Drop UI,ciportal,/ENM/releases,ENM,4.0,12000,8000,Drop Page Loaded

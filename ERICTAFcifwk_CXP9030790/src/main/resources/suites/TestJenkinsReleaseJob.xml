@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestJenkinsReleaseJob">
+
+    <test name="TestJenkinsReleaseJob" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestJenkinsReleaseJob">
+                <methods>
+                    <include name="testCreateJenkinsReleaseJobConfigFile" />
+                    <include name="testCreateJenkinsReleaseJob" />
+                    <include name="testBuildJenkinsReleaseJob" />
+                    <include name="testJenkinsReleaseJobStatus" />
+                    <include name="testGetJenkinsReleaseJobLog" />
+                    <include name="testDeleteJenkinsReleaseJob" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.NexusArtifactChecksumTest">
+                <methods>
+                    <include name="testArtifactChecksum" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

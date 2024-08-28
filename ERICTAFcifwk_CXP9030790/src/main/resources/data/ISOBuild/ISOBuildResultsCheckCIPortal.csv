@@ -1,0 +1,10 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICsck_APR9010270,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg1_CXP0000002,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg2_CXP0000003,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg4_CXP0000005,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg5_CXP0000006,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtorinst_CXP9023304,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg3_CXP0000004,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestimage_CXP0000008,TRUE
+ciportal,/test/1.0.4/mediaContentJson/testma/1.0.3/False/,,GET,OK,ERICtestpkg6_CXP0000007,FALSE
